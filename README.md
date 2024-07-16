@@ -49,41 +49,44 @@
 
 [//]: # (> [2021-11-20]: Publish the <a href="#inference-code---how-to-test-on-your-images">inference code</a> and the pretrained model &#40;[Google Drive]&#40;https://drive.google.com/uc?export=download&id=1smX2YQGIpzKbfwDYHAwete00a_YMwoG1&#41; | [Baidu Wangpan &#40;pw: 2308&#41;]&#40;https://pan.baidu.com/s/1zGF3qnnD8qpI-Z5Nz0TDGA&#41;&#41; that can be used to test on your own privacy-preserving or normal portrait images. Some test results on P3M-10k can be viewed from this [demo page]&#40;https://github.com/JizhiziLi/P3M/tree/master/demo&#41;.)
 
-><h3><strong><i>Code is available:</i></strong></h3>
 
-><h3><strong><i>Step: 1</i></strong></h3>
->
-> 1.Install packages with requirements.txt
-> 
-> 2.Download IRSTD-1k and put it to ./IRSTD-1k
-> 
-> 3.Download sirst and put it to ./sirst-master
-><h3><strong><i>Step: 2</i></strong></h3>
->
-> 1.Install DCNv2(please refer to https://github.com/jinfagang/DCNv2_latest)
-> 
-> 2.Put the DCNv2 to ISNet/model/DCNv2
-> 
-> 3.Compile DCNv2(please refer to https://github.com/jinfagang/DCNv2_latest)
->
-> 4.Pyhton model/train_ISNet.py
 
-><h3><strong><i>Citation:</i></strong></h3>
-> @inproceedings{zhang2022isnet,
-> 
-> title={ISNet: Shape Matters for Infrared Small Target Detection},
-> 
->   author={Zhang, Mingjin and Zhang, Rui and Yang, Yuxiang and Bai, Haichen and Zhang, Jing and Guo, Jie},
-> 
->   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
-> 
->   pages={877--886},
-> 
->   year={2022}
+## Setup
+
+- Step-1
+    ```sh
+    pip install -r requirement.txt
+    ```
+
+- Step-2 : Install [DCNv2](https://github.com/CharlesShang/DCNv2) (Refer the README)
+- Step-3 : Copy DCNv2 to `ISNET/model/DCNv2`
+- Step-4 : Train the ISNET model
+    ```sh
+    python ./model/train_ISNet.py
+    ```
+--- 
+
+### Citation:
+
+```sh
+@inproceedings{zhang2022isnet,
+
+title={ISNet: Shape Matters for Infrared Small Target Detection},
+
+  author={Zhang, Mingjin and Zhang, Rui and Yang, Yuxiang and Bai, Haichen and Zhang, Jing and Guo, Jie},
+
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+
+  pages={877--886},
+
+  year={2022}
 }
-><h3><strong><i>Thanks:</i></strong></h3>
-> Part of the code draws on the work of the following authors:
-> 
-> https://github.com/jinfagang/DCNv2_latest
-> 
-> https://github.com/Tianfang-Zhang/acm-pytorch
+```
+
+#### Thanks
+
+Part of the code draws on the work of the following authors:
+
+- https://github.com/CharlesShang/DCNv2
+- https://github.com/jinfagang/DCNv2_latest
+- https://github.com/Tianfang-Zhang/acm-pytorch
