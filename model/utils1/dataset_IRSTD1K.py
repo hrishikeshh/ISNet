@@ -50,7 +50,7 @@ class SirstDataset(Data.Dataset):
 
     def __init__(self, args, mode='train'):
 
-        base_dir = '/home/imglab/ZR/ISNet_/IRSTD-1k'
+        base_dir = 'C:\\Users\\User 1\\Documents\\Hrishikesh\\Github\\ISNet'
 
         if mode == 'train':
             txtfile = 'trainval.txt'
